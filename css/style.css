@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* common */
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+/* Body */
+body{
+    font-family: system-ui;
+    background: linear-gradient(#01012e , #240019);
+
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../image/stars1.png);
+}
+section ul {
+    list-style: none;
+}
+section ul li{
+    text-align: center;
+    margin: 14px 0;
+
+}
+section ul li a{
+    background-color: darkblue;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    font-size: 20px;
+    display: inline-block;
+    width: 160px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+ul:hover  a{
+    opacity: 0;
+}
+ul li a:hover{
+    opacity: 1;
+    transform: scale(1.5);
+    background-color: darkmagenta;
+}
+ul li::after{
+    content :attr(data-text);
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , -50%);
+    letter-spacing: 50px;
+    transition: .5s;
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    z-index: -1;
+
+}
+li:hover::after{
+    opacity: 0.5;
+    letter-spacing: 5px;
+}
+ul li::before{
+    content: "";
+    width: 180px;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 80px orangered;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50% , 60%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s;
+}
+li:hover::before{
+    opacity: 0.5;
+    width: 80px;
+}
+@media (min-width:670px) and (max-width:810px){
+    ul li::after{
+        letter-spacing: 40px;
+        font-size: 67px;
+    }
+}
+
+@media (min-width:505px) and (max-width:670px){
+    ul li::after{
+        letter-spacing: 30px;
+        font-size: 48px;
+    }
+}
+@media screen and (max-width:505px){
+    ul li::after{
+        letter-spacing: 25px;
+        font-size: 43px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
